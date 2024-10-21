@@ -17,9 +17,9 @@ int main() {
     int sum1 = 0;
     int sum2 = 0;
 
-    for(int i = 0; i < values.size(); i++) {
+    for (int i = 0; i < values.size(); i++) {
         int element = values.get(i);
-        if(sum1 < sum2) {
+        if (sum1 < sum2) {
             subset1.put(element);
             sum1 += element;
         } else {

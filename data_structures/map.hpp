@@ -161,21 +161,6 @@ public:
         cap = newcap;
     }
 
-    Vector<string> keys() const {
-        Vector<string> result;
-
-        for (int i = 0; i < cap; i++) {
-            KeyVal* node = data[i];
-
-            while (node != nullptr) {
-                result.pushBack(node->key);
-                node = node->next;
-            }
-        }
-
-        return result;
-    }
-
     string join() {
         string result = "";
 

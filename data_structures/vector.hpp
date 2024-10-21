@@ -99,12 +99,40 @@ public:
 
         return data[index];
     }
+
+    int find(T value) {
+        for (int i = 0; i < len; i++) {
+            if (data[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    int min() {
+        if (len == 0) {
+            throw runtime_error("Vector is empty");
+        }
+
+        int minValue = data[0];
+        for (int i = 1; i < len; i++) {
+            if (data[i] < minValue) {
+                minValue = data[i];
+            }
+        }
+        return minValue;
+    }
 };
+
+ostream& operator<<(ostream&os, const pair<char, char>& p) {
+    os << p.first << "," << p.second;
+    return os;
+}
 
 template <typename T>
 ostream& operator<<(ostream& os, const Vector<T>& vec) {
     for (int i = 0; i < vec.size(); i++) {
-        os << vec.get(i) << ",";
+        os << vec.get(i) << ";";
     }
     os << endl;
     return os;
