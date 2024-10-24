@@ -38,12 +38,12 @@ int main() {
     destinations.put('A', 'B', 1);
     destinations.put('B', 'C', 2);
     destinations.put('A', 'C', 4);
-    destinations.put('B', 'A', 1);
-    destinations.put('B', 'B', 5);
+    destinations.put('C', 'D', 1);
+    destinations.put('A', 'D', 5);
 
     cout << destinations << endl;
     // cout << destinations.pairs() << endl;
-    auto lengths = findLengths('A', 'C', destinations);
+    auto lengths = findLengths('A', 'D', destinations);
     cout << lengths.min() << endl;
     return 0;
 }

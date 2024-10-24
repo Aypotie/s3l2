@@ -82,12 +82,13 @@ public:
     }
 
     void sort() {
-        int temp;
-        for(int i = 0; i < len; i++) {
-            if (data[i] < data[i+1]) {
-                temp = data[i];
-                data[i] = data[i+1];
-                data[i+1] = temp;
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len; j++) {
+                if (data[i] < data[j]) {
+                    T temp = data[i];
+                    data[i] = data[j];
+                    data[j] = temp;
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ int main() {
 
     auto values = set.values();
     values.sort();
+    values.reverse();
 
     Set subset1, subset2;
     int sum1 = 0;

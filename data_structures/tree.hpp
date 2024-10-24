@@ -1,5 +1,5 @@
-#ifndef AVL_H
-#define AVL_H
+#ifndef TREE_H
+#define TREE_H
 
 #include <iostream>
 #include <iomanip>
@@ -51,7 +51,7 @@ struct Tree {
             if (node->value == value) {
                 return node;
             }
-
+            // добавляет потомков текущего узла в стек для дальнейшего обхода
             if (node->right != nullptr) {
                 stack.push(node->right);
             }

@@ -1,19 +1,20 @@
 #include <iostream>
 #include "data_structures/tree.hpp"
 
-
 int main() {
     Tree tree;
-    tree.insert(tree.head, 5);
-    tree.insert(tree.head, 10);
-    tree.insert(tree.head, 15);
-    tree.insert(tree.head, 3);
+    tree.insertNum(5);
+    tree.insertNum(10);
+    tree.insertNum(15);
+    tree.insertNum(3);
 
     cout << tree << endl;
-    if (tree.find(11)) {
-        cout << "true" << endl;
+    int a = 3;
+    cout << "Element " << a;
+    if (tree.find(a)) {
+        cout << " is found" << endl;
     } else {
-        cout << "false" << endl;
+        cout << " is not found" << endl;
     }
     //cout << tree.find(10) << endl;
     //cout << tree.find(11) << endl;
